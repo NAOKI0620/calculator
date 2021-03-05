@@ -1,20 +1,19 @@
-    let result=document.getElementById("result"); 
-   
-   
-    function update(number) 
-    {
-        document.getElementById("result").value = number
+ let result=document.getElementById("result"); 
+     function append(number){
+        result.value += number;
+       
+    }
+    function keisan(number){
+         result.value=Number(result.value);
+         result.value += number;
     }
 
-    function append(number) 
-    {
-        document.getElementById("result").value += number
+    function update(number){
+        result.value = number;
+        
     }
-    
-     
 
-    function calc() 
-    {
+    function calc(){
         result.value = new Function("return " + result.value)();
     }
-   
+
